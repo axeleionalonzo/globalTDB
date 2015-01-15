@@ -61,10 +61,9 @@
                   </div>
                   <div class="col-md-3 column"><?php echo $employee[0]->name;?>
                   </div>
-                  <div class="col-md-3 column">Contact No:
+                  <div class="col-md-3 column">Date Terminated:
                   </div>
-                  <div class="col-md-3 column"> asdasd
-                  <!-- <?php echo $employee[0]->contact_no;?> -->
+                  <div class="col-md-3 column"><?php echo $employee[0]->date_terminated;?>
                   </div>
                 </div>
 
@@ -73,6 +72,11 @@
                   </div>
                   <div class="col-md-3 column"> asdasd
                   <!-- <?php echo $employee[0]->address;?> -->
+                  </div>
+                  <div class="col-md-3 column">Contact No:
+                  </div>
+                  <div class="col-md-3 column"> asdasd
+                  <!-- <?php echo $employee[0]->contact_no;?> -->
                   </div>
                 </div>
 
@@ -139,9 +143,9 @@
 
     <div class="modal-footer">
       <?php $id = $employee[0]->employee_id;?>
-      <a href="<?php echo base_url();?>index.php/employee/viewPayroll/<?php echo $id;?>" type="button" class="btn btn-info">Payroll</a>
-      <a style="float: left;" href="<?php echo base_url();?>index.php/employee/delete/<?php echo $id;?>" type="button" class="btn btn-primary" onclick="return confirm('Are you sure to Delete this Employee?')">Delete</a>
-      <a href="<?php echo base_url();?>index.php/employee/edit/<?php echo $id;?>" type="button" class="btn btn-success" data-toggle="modal" data-target="#myModaledit">Edit employee</a>
+      <a href="<?php echo base_url();?>index.php/home/viewPayroll/<?php echo $id;?>" type="button" class="btn btn-info">Payroll</a>
+      <a style="float: left;" href="<?php echo base_url();?>index.php/home/delete/<?php echo $id;?>" type="button" class="btn btn-primary" onclick="return confirm('Are you sure to Delete this Employee?')">Delete</a>
+      <a href="<?php echo base_url();?>index.php/home/edit/<?php echo $id;?>" type="button" class="btn btn-success" data-toggle="modal" data-target="#myModaledit">Edit employee</a>
       <a href="<?php echo base_url();?>index.php" type="button" class="btn btn-default">Back</a>
     </div>
 </form>

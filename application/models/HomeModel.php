@@ -39,6 +39,13 @@ class HomeModel extends CI_Model {
         return $query->result();
     }
 
+
+    function getEmployees(){
+        $query = $this->db->get('employee');
+
+        return $query->result();
+    }
+
     function getallrecords()
     {
         $query = $this->db->get('employee');
@@ -80,7 +87,7 @@ class HomeModel extends CI_Model {
 
     function delete_entry($employee_id)
     {
-        $this->db->delete('report', array('employee_id' => $employee_id));
+        $this->db->delete('employee', array('employee_id' => $employee_id));
     }
 }
 ?>

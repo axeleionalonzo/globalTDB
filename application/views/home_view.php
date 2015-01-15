@@ -93,12 +93,12 @@
 
                       <?php
 	                        if (count($employees)==0) {
-	                    echo "<center><h4>No Employee Found</h4></center>"; ?>
+	                    echo "<center><h4><font color='red'>No Employee Found</font></h4></center>"; ?>
 	                     	<?php } else {
 	                          	for($i=0; $i<count($employees);$i++) { ?>
                         <tr>
                                 <td><?php echo $employees[$i]->employee_id;?></td>
-                                <td><div class="bs-component"><a href="<?php echo base_url();?>index.php/home/view/<?php echo $employees[$i]->employee_id;?>" data-toggle="tooltip" data-placement="top" data-original-title="Click Here to view more"><?php echo $employees[$i]->name;?></a></div></td>
+                                <td><div class="bs-component"><a href="<?php echo base_url();?>index.php/home/view/<?php echo $employees[$i]->employee_id;?>" data-toggle="tooltip" data-placement="top" data-original-title="Click to View More"><?php echo $employees[$i]->name;?></a></div></td>
                                 <td><?php echo $employees[$i]->hourly_rate;?></td>
                                 <td><?php echo $employees[$i]->overtime_rate;?></td>
                                 <td><?php echo $employees[$i]->pagibig_no;?></td>
