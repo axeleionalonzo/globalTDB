@@ -1,0 +1,18 @@
+create table employee(
+
+employee_id serial,
+name varchar(50),
+contact_no varchar(50),
+addresss varchar(50),
+hourly_rate varchar(50),
+overtime_rate varchar(50),
+witholding_tax varchar(50),
+pagibig_no varchar(50),
+sss_no varchar(50),
+philhealth_no varchar(50),
+insurance_no varchar(50),
+date_employed varchar(50),
+date_terminated varchar(50),
+
+primary key(employee_id)
+);
