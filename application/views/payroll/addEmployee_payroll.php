@@ -110,6 +110,17 @@
                       <?php
                               for($i=0; $i<count($employees);$i++) {
 
+                                  if (count($employees_withpayroll)==0) { ?>
+
+                                        <tr>
+                                      <?php $show = '<a href="#" data-toggle="modal" data-target="#';
+                                            $show2 = $employees[$i]->employee_id;
+                                            $show3 = '">';
+                                            $show4 = $employees[$i]->name;
+                                            $show5 = '</a>';
+                                            $status = 'Not on Payroll';
+                                  } else {
+
                                     for ($j=0; $j < count($employees_withpayroll); $j++) {
 
                                     if(($payrolls[0]->pay_period_from)==($employees_withpayroll[$j]->pay_period_from) && ($employees[$i]->id_num)==($employees_withpayroll[$j]->id_num)) {
@@ -133,7 +144,7 @@
                                             $status = 'Not on Payroll';
                                       }
                                     }
-
+                                  }
                                     ?>
 
                           <?php if ($employees[$i]->date_terminated=='') { ?>

@@ -75,10 +75,10 @@
                       
                       <thead>
                         <tr>
-                          <th><small>Ordered From</small></th>
-                          <th><small>For</small></th>
-                          <th><small>Date</small></th>
-                          <th><small>Total</small></th>
+                          <th class="col-md-5 column"><small>Ordered From</small></th>
+                          <th class="col-md-4 column"><small>For</small></th>
+                          <th class="col-md-2 column"><small>Date</small></th>
+                          <th class="col-md-1 column"><small>Total</small></th>
                         </tr>
                       </thead>
                       

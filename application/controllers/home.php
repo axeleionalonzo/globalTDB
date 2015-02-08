@@ -365,7 +365,7 @@ class Home extends CI_Controller {
             $config['next_link'] = '»';
             $config['prev_link'] = '«';
 
-            $limit = $config['per_page'] = 50;
+            $limit = $config['per_page'] = 100;
             $start = $this->uri->segment(3);
             $config['num_links'] = 100;
             $this->pagination->initialize($config);

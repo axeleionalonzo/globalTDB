@@ -180,17 +180,22 @@
                 </table>
 
 <?php 
-$work_progress = 0;
+$work_progress_days = 0;
+$work_progress_overtime = 0;
 $worked[] = 0;
+$overtime[] = 0;
 for ($i=0; $i < count($employees_onPayroll); $i++) { 
   if ($employees_onPayroll[$i]->id_num==$employee[0]->id_num) {
   $worked[$i] = $employees_onPayroll[$i]->days_worked;
-  $work_progress += $worked[$i];
+  $overtime[$i] = $employees_onPayroll[$i]->overtime_hours;
+  $work_progress_days += $worked[$i];
+  $work_progress_overtime += $overtime[$i];
   } else {
 
   }
 } 
   $worked_days = count($worked);
+  $worked_hours = count($overtime);
 
   ?>
 
@@ -198,10 +203,11 @@ for ($i=0; $i < count($employees_onPayroll); $i++) {
                     <tbody>
                         <tr>
                           <td>
-                            <h4 id="progress-stacked">Avarage Days Worked in a Week</h4>
+                            <h4 id="progress-stacked">Progress in Weeks</h4>
                             <div class="bs-component">
-                              <div class="progress">
-                                <div class="progress-bar progress-bar-success" style="width: <?php echo ($work_progress/$worked_days)*10;?>%"></div>
+                              <div class="progress progress-striped active">
+                                  <div class="progress-bar progress-bar-info" data-toggle="tooltip" data-placement="top" data-original-title="Average Working Days in a Week - <?php echo number_format(($work_progress_days/$worked_days),2);?> days" style="width: <?php echo ($work_progress_days/$worked_hours)*10;?>%"></div>
+                                  <div class="progress-bar progress-bar-warning" data-toggle="tooltip" data-placement="top" data-original-title="Average Overtime Hours in a Week - <?php echo number_format((($work_progress_overtime/24)/$worked_days),2);?> Hours" style="width: <?php echo (($work_progress_overtime/24)/$worked_hours)*10;?>%"></div>
                               </div>
                             </div>
                           </td>

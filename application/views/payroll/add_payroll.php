@@ -184,26 +184,26 @@
                                 <td><?php if (is_numeric($grosspay)) 
                                           { if ($grosspay==0) {
                                             echo "";
-                                            } else { ?> ₱ <?php echo number_format($grosspay, 2); 
+                                            } else { ?> ₱<?php echo number_format($grosspay, 2); 
                                               }
                                           } else { echo "N/A"; } ?></td>
-                                <td><?php if (is_numeric($employees_onPayroll[$i]->uniforms)) { ?> ₱ <?php echo number_format($employees_onPayroll[$i]->uniforms, 2); } else { echo ""; } ?></td>
-                                <td><?php if (is_numeric($employees_onPayroll[$i]->cash_advance)) { ?> ₱ <?php echo number_format($employees_onPayroll[$i]->cash_advance, 2); } else { echo ""; } ?></td>
-                                <td><?php if (is_numeric($employees_onPayroll[$i]->gtech_ca)) { ?> ₱ <?php echo number_format($employees_onPayroll[$i]->gtech_ca, 2); } else { echo ""; } ?></td>
-                                <td><?php if (is_numeric($employees_onPayroll[$i]->others)) { ?> ₱ <?php echo number_format($employees_onPayroll[$i]->others, 2); } else { echo ""; } ?></td>
-                                <td><?php if (is_numeric($employees_onPayroll[$i]->special_balance)) { ?> ₱ <?php echo number_format($employees_onPayroll[$i]->special_balance, 2); } else { echo ""; } ?></td>
+                                <td><?php if (is_numeric($employees_onPayroll[$i]->uniforms)) { ?> ₱<?php echo number_format($employees_onPayroll[$i]->uniforms, 2); } else { echo ""; } ?></td>
+                                <td><?php if (is_numeric($employees_onPayroll[$i]->cash_advance)) { ?> ₱<?php echo number_format($employees_onPayroll[$i]->cash_advance, 2); } else { echo ""; } ?></td>
+                                <td><?php if (is_numeric($employees_onPayroll[$i]->gtech_ca)) { ?> ₱<?php echo number_format($employees_onPayroll[$i]->gtech_ca, 2); } else { echo ""; } ?></td>
+                                <td><?php if (is_numeric($employees_onPayroll[$i]->others)) { ?> ₱<?php echo number_format($employees_onPayroll[$i]->others, 2); } else { echo ""; } ?></td>
+                                <td><?php if (is_numeric($employees_onPayroll[$i]->special_balance)) { ?> ₱<?php echo number_format($employees_onPayroll[$i]->special_balance, 2); } else { echo ""; } ?></td>
                                 <td><?php if ($total_deductions==0) {
                                         echo "";
-                                      } else {?>₱ <?php echo number_format($total_deductions, 2); 
+                                      } else {?>₱<?php echo number_format($total_deductions, 2); 
                                         }?></td>
 
                                 <td><?php if (is_numeric($net_pay[$i]))
                                           { if ($net_pay[$i]==0) {
                                             echo "";
                                             } else if ($net_pay[$i]<0) {
-                                              ?><font color="red">₱ <?php echo number_format($net_pay[$i], 2); ?></font><?php
+                                              ?><font color="red">₱<?php echo number_format($net_pay[$i], 2); ?></font><?php
                                             } else {
-                                              ?>₱ <?php echo number_format($net_pay[$i], 2);
+                                              ?>₱<?php echo number_format($net_pay[$i], 2);
                                             }
                                           } else { echo "N/A"; } ?></td>
                                 <?php
@@ -350,7 +350,7 @@
                               </div>
                               <label align="right" for="grand_total" class="col-lg-3 control-label">Grand Total</label>
                               <div align="right" class="col-lg-3">
-                                ₱ <?php echo number_format($grand_total, 2); ?>
+                                ₱<?php echo number_format($grand_total, 2); ?>
                                 <span class="help-block"><font color="red"><?php echo form_error("grand_total");?></font></span>
                                 <input name="pay_period_from" type="hidden" class="form-control" id="pay_period_from" value="<?php echo $payroll[0]->pay_period_from;?>">
                                 <input name="pay_period_to" type="hidden" class="form-control" id="pay_period_to" value="<?php echo $payroll[0]->pay_period_to;?>">

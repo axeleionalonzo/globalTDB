@@ -179,7 +179,7 @@
               <div class="form-group">
                 <label for="id_num" class="col-lg-3 control-label">ID Number</label>
                 <div class="col-lg-9">
-                  <input name="id_num" type="text" class="form-control" id="id_num" value="00<?php echo (count($employees)+1);?>">
+                  <input name="id_num" type="text" class="form-control" id="id_num" value="<?php echo sprintf("%04d", (count($employees)+1));?>">
                   <span class="help-block"><font color="red"><?php echo form_error('id_num');?></font></span>
                 </div>
               </div>
